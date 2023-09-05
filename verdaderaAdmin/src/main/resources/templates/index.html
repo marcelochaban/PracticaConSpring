@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>cuack 13</h1>
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>ventas</th>
+    </tr>
+    <tr th:each="cliente :${clientes}">
+        <td th:text="${cliente.nombre}">Mostrar Nombre</td>
+        <td th:text="${cliente.apellido}">Mostrar apellido</td>
+        <td th:text="${cliente.mail}">Mostrar mail</td>
+        <td th:text="${cliente.telefono}">Mostrar telefono</td>
+        <td th:text="${cliente.id}">Mostrar id</td>
+    </tr>
+</table>
+</body>
+</html>
